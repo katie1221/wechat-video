@@ -1,0 +1,41 @@
+<!--pages/video-detail/video-detail.wxml-->
+<view class="mainContent">
+    <view class="mainList">
+        <view class="playerInfo" data-src="{{videoDetail.videoUrl}}" wx:if="{{current_id && current_id == videoDetail.id}}">
+            <view class="video">
+                <video class="videoContent" id="videoId" show-center-play-btn="true" autoplay="true"
+                    danmu-list="{{danmuList}}" danmu-btn enable-danmu
+                 src="{{videoDetail.videoUrl}}" object-fit="fill" bindfullscreenchange="fullscreenchange"></video>
+            </view>
+        </view>
+        <view class="playerInfo" data-src="{{videoDetail.videoUrl}}" wx:if="{{current_id =='' || current_id != videoDetail.id}}">
+            <view class="video">
+                <image class="playImg" src="/images/play.png" mode="aspectFill" bindtap="videoPlay" id="{{videoDetail.id}}" data-index="videoId"/>
+                <image class="videoContent" src="{{videoDetail.poster}}" mode="aspectFill" bindtap="videoPlay" id="{{videoDetail.id}}" data-index="videoId"/>
+            </view>
+        </view>
+    </view>
+    <!--弹幕-->
+    <view class="danmu">
+        <view class="danmu-input">
+            <input class="weui-input" type="text" placeholder="请输入弹幕" bindblur="bindInputblur"/>
+        </view>
+        <view class="danmu-btn">
+            <button type="primary" bindtap = "bindSendDanmu">发送弹幕</button>
+        </view>
+        <view class="danmu-color">
+            <view class="danmu-color-switch">
+                <view class="weui-cell-bd">随机颜色</view>
+                <view class="weui-cell-ft">
+                    <switch checked="true" type="switch" bindchange="switchChange"></switch>
+                </view>
+            </view>
+            <view class="danmu-color-select" bindtap = "selectColor">
+                <view class="weui-cell-bd">选择颜色</view>
+                <view class="weui-cell-ft">
+                    <view class="selectColor" style="background-color: {{numberColor}};"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

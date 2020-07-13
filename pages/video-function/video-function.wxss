@@ -1,0 +1,33 @@
+/* pages/video-function/video-function.wxss */
+page{
+    width: 100%;
+    background: #f7f7f7;
+}
+.main{
+    width:100%;
+    margin-top: 60rpx;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100rpx;
+    background: #ffffff;
+}
+.hintText{
+    width:90%;
+    font-size: 28rpx;
+    color:#000000;
+    font-family: PingFang SC;
+    font-weight: 400;
+    padding-left: 30rpx;
+}
+.rightArrow{
+    width:36rpx;
+    height: 36rpx;
+}
+.line{
+    margin-left: 30rpx;
+    height: 1px;
+    background: #eeeeee;
+}

@@ -1,0 +1,38 @@
+/* pages/video-list/video-list.wxss */
+.mainContent{
+    background: #ffffff;
+    overflow: auto;
+}
+.mainList{
+    width:100%;
+    background: #ffffff;
+    height: 416rpx;
+}
+.video{
+    width:94%;
+    height: 324rpx;
+    margin-left: 20rpx;
+    position: relative;
+    text-align: center;
+}
+.videoContent{
+    width:100%;
+    height: 324rpx;
+}
+/*播放小图标*/
+.playImg{
+    position: absolute;
+    top: 46%;
+    left:46%;
+    width:64rpx;
+    height: 64rpx;
+}
+.actionBtn{
+ width: 100%;
+ margin-top: 10rpx;
+}
+.actionBtn .img{
+    width:60rpx;
+    height: 60rpx;
+    margin-left: 20rpx;
+}

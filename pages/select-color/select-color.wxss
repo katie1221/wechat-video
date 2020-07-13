@@ -1,0 +1,21 @@
+/* pages/select-color/select-color.wxss */
+.color-items{
+    border-top: 1rpx solid #d9d9d9;
+    border-left: 1rpx solid #d9d9d9;
+}
+.item{
+    position: relative;
+    float: left;
+    padding: 20rpx;
+    width: 20%;
+    box-sizing: border-box;
+    border-right: 1rpx solid #d9d9d9;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+.item-icon{
+    display: block;
+    width:100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px #bbbbbb;
+}

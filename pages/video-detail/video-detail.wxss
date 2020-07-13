@@ -1,0 +1,74 @@
+
+.mainContent{
+    background: #ffffff;
+    overflow: auto;
+}
+.mainList{
+    width:100%;
+    background: #ffffff;
+    height: 396rpx;
+}
+.video{
+    width:94%;
+    height: 324rpx;
+    margin-left: 20rpx;
+    position: relative;
+}
+.videoContent{
+    width:100%;
+    height: 324rpx;
+}
+/*播放小图标*/
+.playImg{
+    position: absolute;
+    top: 46%;
+    left:46%;
+    width:64rpx;
+    height: 64rpx;
+}
+/*弹幕*/
+.danmu{
+    width:100%;
+}
+.danmu-input{
+    width:100%;
+    height: 60rpx;
+}
+.weui-input{
+    display: flex;
+    width:94%;
+    height: 60rpx;
+    align-items: center;
+    margin-left: 20rpx;
+    border-radius: 8rpx;
+    border:2rpx solid #cccccc;
+    padding-left:10rpx;
+    font-size: 28rpx;
+}
+.danmu-btn{
+    width:100%;
+    margin-top: 20rpx;
+}
+.danmu-color{
+    width:100%;
+    margin-top: 20rpx;
+    border-top:2rpx solid #cccccc;
+}
+.danmu-color-switch,.danmu-color-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*两端对齐*/
+    align-items: center;
+    margin: 20rpx 20rpx 0 20rpx;
+}
+.weui-cell-bd{
+    font-size: 28rpx;
+}
+.weui-cell-ft{
+    font-size: 28rpx;
+}
+.selectColor{
+    width:80rpx;
+    height: 80rpx;
+    line-height: 100rpx;
+}

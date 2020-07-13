@@ -1,0 +1,20 @@
+<!--pages/video-list/video-list.wxml-->
+<view class="mainContent">
+    <view wx:for="{{videoList}}" wx:key="{{index}}" class="mainList">
+        <view class="playerInfo" data-src="{{item.videoUrl}}" wx:if="{{current_id && current_id == item.id}}">
+            <view class="video">
+                <video class="videoContent" id="videoId{{item.id}}" show-center-play-btn="true" autoplay="true"
+                 src="{{item.videoUrl}}" object-fit="fill" bindfullscreenchange="fullscreenchange"></video>
+            </view>
+        </view>
+        <view class="playerInfo" data-src="{{item.videoUrl}}" wx:if="{{current_id =='' || current_id != item.id}}">
+            <view class="video">
+                <image class="playImg" src="/images/play.png" mode="aspectFill" bindtap="videoPlay" id="{{item.id}}" data-index="videoId{{item.id}}"/>
+                <image class="videoContent" src="{{item.poster}}" mode="aspectFill" bindtap="videoPlay" id="{{item.id}}" data-index="videoId{{item.id}}"/>
+            </view>
+        </view>
+        <view class="actionBtn">
+            <image class="img" src="/images/upload.png" data-url="{{item.videoUrl}}" mode="aspectFit" bindtap="toUploadVideo"></image>
+        </view>
+    </view>
+</view>

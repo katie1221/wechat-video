@@ -1,0 +1,30 @@
+<!--pages/video/video.wxml-->
+<view class="main">
+    <view class="playerInfo">
+        <view class="video" wx:if="{{clickFlag}}">
+            <image class="videoContent" wx:if="{{poster}}" src="{{poster}}" mode="aspectFill" bindtap="chooseVideo"/>
+            <view class="videoContent"  wx:else bindtap="chooseVideo" >
+                <image class="playImg" src="/images/uploadVideo.png" mode="aspectFill"/>
+            </view>
+        </view>
+        <view class="video" wx:else>
+            <image class="videoContent" wx:if="{{poster}}" src="{{poster}}" mode="aspectFill"/>
+            <view class="videoContent"  wx:else>
+                <image class="playImg" src="/images/uploadVideo.png" mode="aspectFill"/>
+            </view>
+        </view>
+    </view>
+    <view class="footerbtn">
+        <button type="default" style="width:40%;" bindtap = "chooseVideo" wx:if="{{clickFlag}}">上传视频</button>
+        <button type="default" style="width:40%;color:#cccccc;" wx:else>上传视频</button>
+        <button type="primary" style="width:40%;" bindtap = "saveVideo">保存</button>
+    </view>
+    <view class="videoUrlResult" wx:if="{{videoUrl}}" >
+        <view class="title">上传的视频：</view>
+        <!--autoplay="true" 视频自动播放-->
+        <video class="videoContent" style="width: 90%;margin-left: 5%;margin-top: 20rpx;" 
+               show-center-play-btn="true" src="{{videoUrl}}" object-fit="fill" 
+               bindfullscreenchange="fullscreenchange">
+        </video>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/video-function/video-function.wxml-->
+<view class="main">
+    <view class="row" bindtap = "toVideoUpload">
+        <view class="hintText">视频上传</view>
+        <image class="rightArrow" src="{{rightArrow}}" ></image>
+    </view>
+    <view class="line"></view>
+    <view class="row" bindtap = "toVideoList">
+        <view class="hintText">视频列表</view>
+        <image class="rightArrow" src="{{rightArrow}}" ></image>
+    </view>
+    <view class="line"></view>
+    <view class="row" bindtap = "toVideoDetail">
+        <view class="hintText">视频详情（播放、弹幕）</view>
+        <image class="rightArrow" src="{{rightArrow}}" ></image>
+    </view>
+</view>
