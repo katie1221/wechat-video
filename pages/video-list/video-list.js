@@ -7,15 +7,15 @@ Page({
   data: {
     current_id:'',//当前播放视频id
     videoList:[
-      {id:"1","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"2","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"3","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"4","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"5","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"6","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"7","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"8","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
-      {id:"9","videoUrl":"http://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/7732bd367447398157015849771/v.f30.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"}
+      {id:"1","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"2","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"3","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"4","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"5","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"6","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"7","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"8","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"},
+      {id:"9","videoUrl":"https://www.runoob.com/try/demo_source/movie.mp4","poster":"//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg"}
     ]
 
   },
@@ -127,6 +127,14 @@ Page({
         // fail
         wx.hideLoading()
         console.log('下载失败',res)
+        if(res.errMsg.indexOf("the maximum size of the file storage limit is exceeded") >= 0){
+          // 本地文件存储的大小限制为 10M
+          wx.showModal({
+            title: "提示",
+            content: "下载失败,失败原因:超出文件存储限制的最大大小",
+            showCancel: false
+          })
+        }
       }
     })
   },
