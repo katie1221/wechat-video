@@ -11,3 +11,6 @@
 ![视频上传](https://github.com/katie1221/images/blob/master/video-5.png)
 
 ### 弹幕、弹幕颜色自定义
+![视频上传](https://github.com/katie1221/images/blob/master/video-6.png)
+![视频上传](https://github.com/katie1221/images/blob/master/video-7.png)
+![视频上传](https://github.com/katie1221/images/blob/master/video-8.png)
